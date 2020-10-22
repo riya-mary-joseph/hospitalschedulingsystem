@@ -263,4 +263,19 @@ def viewapp():
                 if z==x[0]:
                     print("\n\tHi",x[1],", Your",x[3],"appointment is scheduled for",dicttime[z])
             break
-   
+           
+            
+# Appointment cancellation
+def appointment_cancellation(self, Name, Contact_number):
+    current = self.head            //start traversing the list from the beginning
+    prev = None                    //prev of head is none
+    while current != None:         //list exists
+         if current.Name = Name and current.Contact_number = Contact_number:     //if patient exists
+            if prev:                                                             //non-head node
+            prev.next = current.next                                             //link prev node to cur.next
+            else:                                                                //head node
+            self.head = current.next                                             //set new head as cur.next
+        
+         else:                                                                  //if record doesn't match
+             prev = current 
+             current = current.next                                              //go to next node
